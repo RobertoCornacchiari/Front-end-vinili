@@ -19,7 +19,7 @@ function App() {
 			<Switch>
 				<Route path="/vinyls/:id" component={VinylDetails} />
 				<Route path="/vinyls">
-					<VinylsList></VinylsList>
+					<VinylsList pinco="pallo"></VinylsList>
 				</Route>
 				<Route path="/authors">
 					autori

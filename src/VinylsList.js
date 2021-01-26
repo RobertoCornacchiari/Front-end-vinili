@@ -15,6 +15,17 @@ export function VinylsList() {
             <pre>
                 {JSON.stringify(vinyls, null, 2)}
             </pre>
+            <table>
+                <tr>
+                    <th>Autore</th>
+                    <th>Titolo</th>
+                </tr>
+                {vinyls.map(function (v) {
+                    return (<tr key={v.id}><td>{v.autore}</td><td>{v.titolo}</td></tr>)
+                }
+                )
+                }
+            </table>
         </>
     )
 }
