@@ -9,20 +9,27 @@ import {
 
 import { VinylsList } from "./VinylsList"
 import { VinylDetails } from "./VinylDetails"
+import { AuthorsList} from "./AuthorsList";
+import { GenresList} from "./GenresList";
 
 console.log("ok!")
 
 function App() {
 	return (
 		<Router>
-			<h1>titolo</h1>
 			<Switch>
 				<Route path="/vinyls/:id" component={VinylDetails} />
 				<Route path="/vinyls">
-					<VinylsList pinco="pallo"></VinylsList>
+					<h2>Ecco i vinili presenti nella collezione: </h2>
+					<VinylsList></VinylsList>
 				</Route>
 				<Route path="/authors">
-					autori
+					<h2>Autori</h2>
+					<AuthorsList/>
+				</Route>
+				<Route path="/genres">
+					<h2>Generi</h2>
+					<GenresList/>
 				</Route>
 				<Route path="/">
 					home

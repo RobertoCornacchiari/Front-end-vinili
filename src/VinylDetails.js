@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 
 
 export function VinylDetails(props) {
-    const { id } = props.match.params
-    const [vinyl, setVinyl] = useState({})
+    const { id } = props.match.params;
+    const [vinyl, setVinyl] = useState({});
 
     useEffect(() => {
         fetch("http://127.0.0.1:3000/vinyls/" + id)
@@ -12,7 +12,7 @@ export function VinylDetails(props) {
     }, [])
     return (
         <>
-            <h3>dettagli per il vinile {id}</h3>
+            <h2>Dettagli per il vinile {id}</h2>
             <pre>
                 {JSON.stringify(vinyl, null, 2)}
             </pre>

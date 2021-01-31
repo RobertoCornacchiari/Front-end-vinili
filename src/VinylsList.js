@@ -11,21 +11,29 @@ export function VinylsList() {
 
     return (
         <>
-            <h3>Elenco Vinili</h3>
             <pre>
                 {JSON.stringify(vinyls, null, 2)}
             </pre>
+            {/*
             <table>
+                <thead>
                 <tr>
                     <th>Autore</th>
                     <th>Titolo</th>
                 </tr>
+                </thead>
+                <tbody>
                 {vinyls.map(function (v) {
-                    return (<tr key={v.id}><td>{v.autore}</td><td>{v.titolo}</td></tr>)
-                }
-                )
-                }
+                    return (
+                        <tr key={v.id}>
+                            <td>{v.autore}</td>
+                            <td>{v.titolo}</td>
+                        </tr>
+                    )
+                })}
+                </tbody>
             </table>
+            */}
         </>
     )
 }
