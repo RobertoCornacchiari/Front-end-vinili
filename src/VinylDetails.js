@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 
+const scripts = require("./scripts");
+
 
 export function VinylDetails(props) {
     const { id } = props.match.params;
@@ -10,6 +12,8 @@ export function VinylDetails(props) {
             .then(r => r.json())
             .then(body => setVinyl(body))
     }, [])
+
+    
     return (
         <>
             <h2>Dettagli per il vinile {id}</h2>

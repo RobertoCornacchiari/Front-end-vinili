@@ -7,8 +7,8 @@ import {
 	Link
 } from "react-router-dom";
 
-import { VinylsList } from "./VinylsList"
-import { VinylDetails } from "./VinylDetails"
+import { VinylsList } from "./VinylsList";
+import { VinylDetails } from "./VinylDetails";
 import { AuthorsList} from "./AuthorsList";
 import { GenresList} from "./GenresList";
 
@@ -21,7 +21,7 @@ function App() {
 				<Route path="/vinyls/:id" component={VinylDetails} />
 				<Route path="/vinyls">
 					<h2>Ecco i vinili presenti nella collezione: </h2>
-					<VinylsList></VinylsList>
+					<VinylsList/>
 				</Route>
 				<Route path="/authors">
 					<h2>Autori</h2>
@@ -32,7 +32,7 @@ function App() {
 					<GenresList/>
 				</Route>
 				<Route path="/">
-					home
+					Home
 				</Route>
 			</Switch>
 		</Router>
